@@ -103,15 +103,15 @@
     },
     {
       "name": "React Todo App",
-      "live": "",
       "image": "react-todo-app.jpg",
+      "live": "",
       "source": "https://github.com/korayguler/react-todo-app",
       "tech": ["css", "js", "react", "axios", "json-server"]
     },
     {
       "name": "Live Exchange",
       "image": "live-exchange.jpg",
-      "live": "https://korayguler.github.io/live-exchange/",
+      "live": "https://korayguler.github.io/live-exchange/index.html",
       "source": "https://github.com/korayguler/live-exchange",
       "tech": ["css", "js"]
     },
