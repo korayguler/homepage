@@ -1,36 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from '../helper/getData';
+import Loader from './Loader';
 export default function Home() {
-  const [data, setData] = useState({});
+  const [profile, setProfile] = useState({});
+  const [frontend, setFrontend] = useState([]);
+  const [backend, setBackend] = useState([]);
+  const [devtools, setDevTools] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getData().then((items) => {
-      setData(items.profile);
+      setProfile(items.profile);
+      setFrontend(items.tools.frontend);
+      setBackend(items.tools.backend);
+      setDevTools(items.tools.devtools);
+      setIsLoading(false);
     });
   }, []);
 
   return (
     <>
+      {isLoading && <Loader />}
+
       <section className='section'>
         <h2 className='title'>About Me</h2>
         <div className='profile'>
           <img
             src={
-              !data.profilePic && process.env.PUBLIC_URL + './web/profile.jpg'
+              !profile.profilePic &&
+              process.env.PUBLIC_URL + './web/profile.jpg'
             }
             alt=''
           />
           <div>
             <span>Hi, my name is</span>
-            <h1>{data.fullname}</h1>
-            <p>{data.about}</p>
+            <h1>{profile.fullname}</h1>
+            <p>{profile.about}</p>
             <div className='connect'>
-              <a href={'mailto:' + data.email} className='btn btn-hover'>
+              <a href={'mailto:' + profile.email} className='btn btn-hover'>
                 CONTACT
               </a>
               <a
-                href={data.resume}
                 className='btn btn-hover'
+                href={profile.resume}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -38,6 +50,48 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className='section'>
+        <h2 className='title'>Front-end Tools</h2>
+        <div className='skills'>
+          {frontend.map((e, i) => {
+            return (
+              <div className='skill-item' key={i}>
+                <i className={e.icon}></i>
+                <span>{e.tool}</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className='section'>
+        <h2 className='title'>Back-end Tools</h2>
+        <div className='skills'>
+          {backend.map((e, i) => {
+            return (
+              <div className='skill-item' key={i}>
+                <i className={e.icon}></i>
+                <span>{e.tool}</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className='section'>
+        <h2 className='title'>Dev Tools</h2>
+        <div className='skills'>
+          {devtools.map((e, i) => {
+            return (
+              <div className='skill-item' key={i}>
+                <i className={e.icon}></i>
+                <span>{e.tool}</span>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

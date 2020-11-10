@@ -5,11 +5,15 @@ export default function Footer() {
     <footer className='footer'>
       <span>
         <a
-          href='https://github.com/korayguler/korayguler.github.io'
+          href='https://github.com/korayguler/personal'
           target='_blank'
           rel='noreferrer'
         >
-          korayguler.com
+          made with{' '}
+          <span style={{ 'color': '#A81020' }}>
+            <i class='fas fa-heart'></i>
+          </span>{' '}
+          open Source
         </a>
       </span>
     </footer>

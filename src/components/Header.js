@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Home from './Home';
-import Portfolio from './Portfolio';
+import Projects from './Projects';
 import Gallery from './Gallery';
 import { getData } from '../helper/getData';
 
@@ -36,8 +36,8 @@ export default function Header() {
           <Link className='btn btn-hover' to='/'>
             Home
           </Link>
-          <Link className='btn btn-hover' to='/portfolio'>
-            Portfolio
+          <Link className='btn btn-hover' to='/projects'>
+            Projects
           </Link>
           <Link className='btn btn-hover' to='/gallery'>
             Gallery
@@ -64,7 +64,7 @@ export default function Header() {
             </a>
           </span>
           <span className='theme' onClick={(e) => theme()}>
-            <i className='fas fa-sun'></i>
+            <i class='fas fa-adjust'></i>
           </span>
         </div>
       </header>
@@ -72,8 +72,8 @@ export default function Header() {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route path='/portfolio'>
-          <Portfolio />
+        <Route path='/projects'>
+          <Projects />
         </Route>
 
         <Route path='/gallery'>

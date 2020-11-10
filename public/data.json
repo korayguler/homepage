@@ -1,6 +1,6 @@
 {
   "profile": {
-    "fullname": "Koray Gler",
+    "fullname": "Koray Guler",
     "about": "I am a Sofware Developer and student currently living in İstanbul. My interests range from coffee to swimming. I am also interested in movies and photography.",
     "email": "koray.guler@hotmail.com",
     "resume": "https://docs.google.com/document/d/14VPGGjYkywXwrQMGPfQyGJBG7TJjQFWYfbH9SC_Cj-Y/edit#heading=h.79x9mempro6x",
@@ -12,6 +12,86 @@
     "twitter": "https://twitter.com/korayguler_",
     "linkedin": "https://linkedin.com/in/koray-guler",
     "instagram": "https://instagram.com/_korayguler"
+  },
+  "tools": {
+    "frontend": [
+      {
+        "tool": "javascript",
+        "icon": "devicon-javascript-plain colored"
+      },
+      {
+        "tool": "react",
+        "icon": "devicon-react-original colored"
+      },
+      {
+        "tool": "html5",
+        "icon": "devicon-html5-plain colored"
+      },
+      {
+        "tool": "css3",
+        "icon": "devicon-css3-plain colored"
+      },
+      {
+        "tool": "sass",
+        "icon": "devicon-sass-original colored"
+      },
+      {
+        "tool": "gulp",
+        "icon": "devicon-gulp-plain colored"
+      },
+      {
+        "tool": "bootstrap",
+        "icon": "devicon-bootstrap-plain colored"
+      }
+    ],
+    "backend": [
+      {
+        "tool": "nodejs",
+        "icon": "devicon-nodejs-plain colored"
+      },
+      {
+        "tool": "express",
+        "icon": "devicon-express-original"
+      },
+      {
+        "tool": "Mysql",
+        "icon": "devicon-mysql-plain colored"
+      },
+      {
+        "tool": "mongodb",
+        "icon": "devicon-mongodb-plain colored"
+      }
+    ],
+    "devtools": [
+      {
+        "tool": "babel",
+        "icon": "devicon-babel-plain colored"
+      },
+      {
+        "tool": "git",
+        "icon": "devicon-git-plain colored"
+      },
+      {
+        "tool": "github",
+        "icon": "devicon-github-plain"
+      },
+      {
+        "tool": "npm",
+        "icon": "devicon-npm-original-wordmark colored"
+      },
+      {
+        "tool": "vscode",
+        "icon": "devicon-visualstudio-plain colored"
+      },
+      {
+        "tool": "photoshop",
+        "icon": "devicon-photoshop-plain colored"
+      },
+      {
+        "tool": "devtools",
+        "icon": "devicon-chrome-plain colored"
+      }
+    ]
   },
   "projects": [
     {
