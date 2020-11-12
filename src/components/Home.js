@@ -37,7 +37,7 @@ export default function Home() {
             <h1>{profile.fullname}</h1>
             <p>{profile.about}</p>
             <div className='connect'>
-              <a href={'mailto:' + profile.email} className='btn btn-hover'>
+              <a href={profile.email} className='btn btn-hover'>
                 CONTACT
               </a>
               <a
