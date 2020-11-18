@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Home from './Home';
 import Projects from './Projects';
-import Gallery from './Gallery';
+import Posts from './Posts';
 import { getData } from '../helper/getData';
 
 export default function Header() {
@@ -39,8 +39,8 @@ export default function Header() {
           <Link className='btn btn-hover' to='/projects'>
             Projects
           </Link>
-          <Link className='btn btn-hover' to='/gallery'>
-            Gallery
+          <Link className='btn btn-hover' to='/posts'>
+            Posts
           </Link>
         </nav>
         <div className='helpers'>
@@ -76,8 +76,8 @@ export default function Header() {
           <Projects />
         </Route>
 
-        <Route path='/gallery'>
-          <Gallery />
+        <Route path='/posts'>
+          <Posts />
         </Route>
       </Switch>
     </Router>

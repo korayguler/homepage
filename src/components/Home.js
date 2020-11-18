@@ -28,7 +28,7 @@ export default function Home() {
           <img
             src={
               !profile.profilePic &&
-              process.env.PUBLIC_URL + './web/profile.jpg'
+              process.env.PUBLIC_URL + './web/korayguler.png'
             }
             alt=''
           />
