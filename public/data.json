@@ -20,6 +20,10 @@
         "icon": "devicon-javascript-plain colored"
       },
       {
+        "tool": "vue",
+        "icon": "devicon-vuejs-plain colored"
+      },
+      {
         "tool": "react",
         "icon": "devicon-react-original colored"
       },
@@ -54,7 +58,7 @@
         "icon": "devicon-express-original"
       },
       {
-        "tool": "Mysql",
+        "tool": "mysql",
         "icon": "devicon-mysql-plain colored"
       },
       {
@@ -94,6 +98,20 @@
     ]
   },
   "projects": [
+    {
+      "name": "Vue.js and Vuex TodoList APP",
+      "image": "vuex-todolist.jpg",
+      "live": "https://vuex-todolist.vercel.app/",
+      "source": "https://github.com/korayguler/vuex-todolist",
+      "tech": ["vue", "vuex", "js"]
+    },
+    {
+      "name": "Node.js, Express, ModgoDB API",
+      "image": "nodejs-auth-api.jpg",
+      "live": "https://nodejs--auth-api.herokuapp.com/",
+      "source": "https://github.com/korayguler/nodejs-auth-api",
+      "tech": ["nodejs", "express", "mongodb", "js"]
+    },
     {
       "name": "Pinterest clone with React",
       "image": "pinterest-react.jpg",
