@@ -22,7 +22,7 @@ export default function Gallery() {
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div className='posts'>
+        <div className='posts animate__animated animate__jackInTheBox'>
           {posts.map((e) => {
             return (
               <a

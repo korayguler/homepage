@@ -22,7 +22,7 @@ export default function Home() {
     <>
       {isLoading && <Loader />}
 
-      <section className='section'>
+      <section className='section animate__animated animate__jackInTheBox'>
         <h2 className='title'>About Me</h2>
         <div className='profile'>
           <img
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section'>
+      <section className='section section animate__animated animate__fadeInUpBig'>
         <h2 className='title'>Front-end Tools</h2>
         <div className='skills'>
           {frontend.map((e, i) => {
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section'>
+      <section className='section animate__animated animate__fadeInUpBig'>
         <h2 className='title'>Back-end Tools</h2>
         <div className='skills'>
           {backend.map((e, i) => {
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section'>
+      <section className='section section animate__animated animate__fadeInUpBig'>
         <h2 className='title'>Dev Tools</h2>
         <div className='skills'>
           {devtools.map((e, i) => {

@@ -101,7 +101,6 @@ span {
   font-size: var(--f-16);
 }
 .nav a:last-child {
-  display: none;
 }
 .logo {
   display: none;
@@ -328,6 +327,8 @@ span {
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.04);
   transition: var(--animate);
+  font-size: var(--f-14);
+  color: var(--c-light);
 }
 .post:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -344,6 +345,8 @@ span {
 }
 .post .content p {
   margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .post .content p span {
   background-color: var(--c-light);
@@ -352,6 +355,7 @@ span {
   font-size: var(--f-14);
   margin-right: 5px;
   border-radius: 6px;
+  margin-bottom: 5px;
 }
 .post .image img {
   width: 100%;
