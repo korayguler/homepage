@@ -99,25 +99,46 @@
   },
   "projects": [
     {
+      "name": "Github Profile Preview Tool",
+      "live": "https://gitprof.vercel.app/",
+      "source": "https://github.com/korayguler/gitprof",
+      "image": "gitprof.jpg",
+      "tech": ["vue", "axios", "vue-router"]
+    },
+    {
+      "name": "Giphy Gif Search tool.",
+      "live": "https://giphse.vercel.app/",
+      "source": "https://github.com/korayguler/giphse",
+      "image": "giphse.jpg",
+      "tech": ["vue", "axios"]
+    },
+    {
+      "name": "Developer Portfolio.",
+      "live": "https://developer-portfolio-dun.vercel.app/",
+      "source": "https://github.com/korayguler/developer-portfolio",
+      "image": "developer-portfolio.jpg",
+      "tech": ["react", "react-router"]
+    },
+    {
       "name": "Vue.js and Vuex TodoList APP",
       "image": "vuex-todolist.jpg",
       "live": "https://vuex-todolist.vercel.app/",
       "source": "https://github.com/korayguler/vuex-todolist",
-      "tech": ["vue", "vuex", "js"]
+      "tech": ["vue", "vuex"]
     },
     {
       "name": "Node.js, Express, ModgoDB API",
       "image": "nodejs-auth-api.jpg",
       "live": "https://nodejs--auth-api.herokuapp.com/",
       "source": "https://github.com/korayguler/nodejs-auth-api",
-      "tech": ["nodejs", "express", "mongodb", "js"]
+      "tech": ["nodejs", "express", "mongodb"]
     },
     {
       "name": "Pinterest clone with React",
       "image": "pinterest-react.jpg",
       "live": "",
       "source": "https://github.com/korayguler/pinterest-clone",
-      "tech": ["reactjs", "nextjs", "js", "scss"]
+      "tech": ["reactjs", "nextjs", "scss"]
     },
     {
       "name": "React Todo App",
