@@ -4,10 +4,7 @@ export default function Card(props) {
   const folder = './projects/';
 
   return (
-    <div
-      className='card animate__animated animate__jackInTheBox'
-      key={props.name}
-    >
+    <div className='card animate__animated animate__fadeIn' key={props.name}>
       <img src={folder + props.image} loading='lazy' alt={props.name} />
       <span className='name'>{props.name}</span>
       <div className='tags'>

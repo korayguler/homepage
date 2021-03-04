@@ -15,6 +15,7 @@ export default function Home() {
       setBackend(items.tools.backend);
       setDevTools(items.tools.devtools);
       setIsLoading(false);
+      window.scrollTo(0, 0);
     });
   }, []);
 
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       {isLoading && <Loader />}
 
-      <section className='section animate__animated animate__jackInTheBox'>
+      <section className='section animate__animated animate__fadeInDown'>
         <h2 className='title'>About Me</h2>
         <div className='profile'>
           <img
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section section animate__animated animate__fadeInUpBig'>
+      <section className='section section animate__animated animate__fadeInUp'>
         <h2 className='title'>Front-end Tools</h2>
         <div className='skills'>
           {frontend.map((e, i) => {
@@ -67,7 +68,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section animate__animated animate__fadeInUpBig'>
+      <section className='section '>
         <h2 className='title'>Back-end Tools</h2>
         <div className='skills'>
           {backend.map((e, i) => {
@@ -81,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='section section animate__animated animate__fadeInUpBig'>
+      <section className='section section'>
         <h2 className='title'>Dev Tools</h2>
         <div className='skills'>
           {devtools.map((e, i) => {

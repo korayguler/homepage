@@ -7,6 +7,7 @@ export default function Gallery() {
     getPosts().then((data) => {
       setPosts(data.items);
       setIsLoading(false);
+      window.scrollTo(0, 0);
     });
   }, []);
 
@@ -22,7 +23,7 @@ export default function Gallery() {
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div className='posts animate__animated animate__jackInTheBox'>
+        <div className='posts animate__animated animate__fadeIn'>
           {posts.map((e) => {
             return (
               <a

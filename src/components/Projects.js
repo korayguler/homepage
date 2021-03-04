@@ -10,6 +10,7 @@ export default function Portfolio() {
     getData().then((items) => {
       setData(items.projects);
       setIsLoading(false);
+      window.scrollTo(0, 0);
     });
   }, []);
 
