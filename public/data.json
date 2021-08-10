@@ -1,208 +1,39 @@
 {
-  "profile": {
-    "fullname": "Koray Guler",
-    "about": "I am a Sofware Developer and student currently living in İstanbul. My interests range from coffee to swimming. I am also interested in movies and photography.",
-    "email": "https://www.linkedin.com/in/koray-guler",
-    "resume": "https://bit.ly/koraygulercv",
-    "profilePic": ""
-  },
-  "social": {
-    "medium": "https://korayguler.medium.com",
-    "github": "https://github.com/korayguler",
-    "twitter": "https://twitter.com/koraycode",
-    "linkedin": "https://linkedin.com/in/koray-guler",
-    "instagram": "https://instagram.com/koraycode"
-  },
-  "tools": {
-    "frontend": [
-      {
-        "tool": "javascript",
-        "icon": "devicon-javascript-plain colored"
-      },
-      {
-        "tool": "vue",
-        "icon": "devicon-vuejs-plain colored"
-      },
-      {
-        "tool": "react",
-        "icon": "devicon-react-original colored"
-      },
-      {
-        "tool": "html5",
-        "icon": "devicon-html5-plain colored"
-      },
-      {
-        "tool": "css3",
-        "icon": "devicon-css3-plain colored"
-      },
-      {
-        "tool": "sass",
-        "icon": "devicon-sass-original colored"
-      },
-      {
-        "tool": "gulp",
-        "icon": "devicon-gulp-plain colored"
-      },
-      {
-        "tool": "bootstrap",
-        "icon": "devicon-bootstrap-plain colored"
-      }
-    ],
-    "backend": [
-      {
-        "tool": "nodejs",
-        "icon": "devicon-nodejs-plain colored"
-      },
-      {
-        "tool": "express",
-        "icon": "devicon-express-original"
-      },
-      {
-        "tool": "mysql",
-        "icon": "devicon-mysql-plain colored"
-      },
-      {
-        "tool": "mongodb",
-        "icon": "devicon-mongodb-plain colored"
-      }
-    ],
-    "devtools": [
-      {
-        "tool": "babel",
-        "icon": "devicon-babel-plain colored"
-      },
-      {
-        "tool": "git",
-        "icon": "devicon-git-plain colored"
-      },
-      {
-        "tool": "github",
-        "icon": "devicon-github-plain"
-      },
-      {
-        "tool": "npm",
-        "icon": "devicon-npm-original-wordmark colored"
-      },
-      {
-        "tool": "vscode",
-        "icon": "devicon-visualstudio-plain colored"
-      },
-      {
-        "tool": "photoshop",
-        "icon": "devicon-photoshop-plain colored"
-      },
-      {
-        "tool": "devtools",
-        "icon": "devicon-chrome-plain colored"
-      }
-    ]
-  },
-  "projects": [
+  "socials": [
     {
-      "name": "Github Profile Preview Tool",
-      "live": "https://gitprof.vercel.app/",
-      "source": "https://github.com/korayguler/gitprof",
-      "image": "gitprof.jpg",
-      "tech": ["vue", "axios", "vue-router"]
+      "name": "Linkedin",
+      "icon": "bxl-linkedin",
+      "url": "https://www.linkedin.com/in/koray-guler"
     },
     {
-      "name": "Giphy Gif Search tool.",
-      "live": "https://giphse.vercel.app/",
-      "source": "https://github.com/korayguler/giphse",
-      "image": "giphse.jpg",
-      "tech": ["vue", "axios"]
+      "name": "Github",
+      "icon": "bxl-github",
+      "url": "https://github.com/korayguler"
     },
     {
-      "name": "Developer Portfolio.",
-      "live": "https://developer-portfolio-dun.vercel.app/",
-      "source": "https://github.com/korayguler/developer-portfolio",
-      "image": "developer-portfolio.jpg",
-      "tech": ["react", "react-router"]
+      "name": "Unsplash",
+      "icon": "bxl-unsplash",
+      "url": "https://unsplash.com/korayguler"
     },
     {
-      "name": "Vue.js and Vuex TodoList APP",
-      "image": "vuex-todolist.jpg",
-      "live": "https://vuex-todolist.vercel.app/",
-      "source": "https://github.com/korayguler/vuex-todolist",
-      "tech": ["vue", "vuex"]
+      "name": "Medium",
+      "icon": "bxl-medium",
+      "url": "https://korayguler.medium.com/"
     },
     {
-      "name": "Node.js, Express, ModgoDB API",
-      "image": "nodejs-auth-api.jpg",
-      "live": "https://nodejs--auth-api.herokuapp.com/",
-      "source": "https://github.com/korayguler/nodejs-auth-api",
-      "tech": ["nodejs", "express", "mongodb"]
+      "name": "Twitter",
+      "icon": "bxl-twitter",
+      "url": "https://twitter.com/koraycode"
     },
     {
-      "name": "Pinterest clone with React",
-      "image": "pinterest-react.jpg",
-      "live": "",
-      "source": "https://github.com/korayguler/pinterest-clone",
-      "tech": ["reactjs", "nextjs", "scss"]
-    },
-    {
-      "name": "React Todo App",
-      "image": "react-todo-app.jpg",
-      "live": "",
-      "source": "https://github.com/korayguler/react-todo-app",
-      "tech": ["css", "js", "react", "axios", "json-server"]
-    },
-    {
-      "name": "Live Exchange",
-      "image": "live-exchange.jpg",
-      "live": "https://korayguler.github.io/live-exchange/index.html",
-      "source": "https://github.com/korayguler/live-exchange",
-      "tech": ["css", "js"]
-    },
-    {
-      "name": "Basic todo list app",
-      "image": "basic-todo.jpg",
-      "live": "https://korayguler.github.io/basic-todo/",
-      "source": "https://github.com/korayguler/basic-todo",
-      "tech": ["css", "js", "Bootstrap"]
-    },
-    {
-      "name": "New Year Countdown Timer",
-      "image": "new-year-countdown.jpg",
-      "live": "https://korayguler.github.io/new-year-countdown/",
-      "source": "https://github.com/korayguler/new-year-countdown",
-      "tech": ["scss", "js"]
-    },
-    {
-      "name": "Genesis Portfolio Template",
-      "image": "genesis-portfolio-template.jpg",
-      "live": "https://korayguler.github.io/genesis-portfolio-template/",
-      "source": "https://github.com/korayguler/genesis-portfolio-template",
-      "tech": ["scss", "js"]
-    },
-    {
-      "name": "Simple Portfolio UI",
-      "image": "simple-portfolio-ui.jpg",
-      "live": "https://korayguler.github.io/simple-portfolio-ui/",
-      "source": "https://github.com/korayguler/simple-portfolio-ui",
-      "tech": ["scss"]
-    },
-    {
-      "name": "Alivio Landing Page UI",
-      "image": "alivio-landing-page-ui.jpg",
-      "live": "https://korayguler.github.io/alivio-landing-page-ui/",
-      "source": "https://github.com/korayguler/alivio-landing-page-ui",
-      "tech": ["scss", "js"]
-    },
-    {
-      "name": "Taskly Web UI",
-      "image": "taskly-web-ui.jpg",
-      "live": "https://korayguler.github.io/taskly-web-ui/",
-      "source": "https://github.com/korayguler/taskly-web-ui",
-      "tech": ["scss"]
-    },
-    {
-      "name": "Cultural Heritage Protection",
-      "live": "",
-
-      "image": "cultural-heritage.jpg",
-      "source": "https://github.com/korayguler/cultural-heritage",
-      "tech": ["css", "bootstrap", "php", "mysql"]
+      "name": "Instagram",
+      "icon": "bxl-instagram",
+      "url": "https://instagram.com/koraycode"
     }
-  ]
+  ],
+  "avatar": "https://images.unsplash.com/profile-1627128664323-7439ccedf295image?dpr=1&auto=format&fit=crop&w=600&h=600&q=60&crop=faces",
+  "email": "koray.guler@hotmail.com",
+  "name": "Koray Guler",
+  "description": "I'm a Frontend Developer based in Istanbul, Turkey. I build, test and deploy modern web applications and i am interested in photography, trekking and swimming",
+  "cv": ""
 }
