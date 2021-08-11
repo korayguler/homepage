@@ -1,48 +1,28 @@
 <template>
-  <div
-    class="
-      fixed
-      flex
-      lg:flex-row
-      xl:flex-row
-      bg-111
-      h-full
-      overflow-auto
-      w-full
-    "
-  >
+  <div class="flex lg:flex-row bg-111 h-screen overflow-auto">
     <app-sidebar />
-    <app-loading v-if="loading" :is-loading="true" />
-    <div
-      class="
-        w-full
-        lg:mt-8
-        xl:mt-8
-        ml-8
-        xl:ml-24
-        lg:ml-24
-        mr-8
-        mt-28
-        z-10
-        relative
-      "
-    >
+    <div class="w-full h-full lg:mt-8 lg:ml-24 mx-8 mt-28 z-10 relative">
       <router-view />
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 import AppSidebar from './components/layout/AppSidebar.vue';
-import AppLoading from './components/layout/AppLoading.vue';
 export default {
-  components: { AppSidebar, AppLoading },
+  components: { AppSidebar },
   name: 'App',
   computed: {
     ...mapState({
       loading: 'loading',
     }),
+  },
+  methods: {
+    ...mapMutations({ setWindowWidth: 'setWindowWidth' }),
+  },
+  created() {
+    window.addEventListener('resize', this.setWindowWidth());
   },
 };
 </script>

@@ -8,6 +8,7 @@ const store = createStore({
     posts: [],
     userData: {},
     loading: false,
+    windowWidth: window.innerWidth,
   }),
   actions: {
     async fetchGalleryImages({ commit }) {
@@ -69,6 +70,15 @@ const store = createStore({
     },
     setUserData(state, payload) {
       state.userData = payload;
+    },
+    setWindowWidth(state) {
+      state.windowWidth = window.innerWidth;
+      console.log(state.windowWidth);
+    },
+  },
+  getters: {
+    isMobile(state) {
+      return state.windowWidth < 1023;
     },
   },
 });

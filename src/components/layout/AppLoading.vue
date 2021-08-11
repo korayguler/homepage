@@ -1,14 +1,23 @@
 <template>
   <transition name="fade" type="animation">
-    <div v-if="isLoading" class="bg-111 top-0 left-0 right-0 bottom-0 absolute">
-      <div
-        class="text-2xl absolute left-1/2 top-1/2 z-30 swapping-squares-spinner"
-      >
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-      </div>
+    <div
+      v-if="isLoading"
+      class="
+        text-2xl
+        absolute
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        top-1/2
+        z-30
+        transform
+        swapping-squares-spinner
+      "
+    >
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
     </div>
   </transition>
 </template>

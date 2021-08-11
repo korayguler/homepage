@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="!isLoading"
     class="
       xl:masonry-4-col
       lg:masonry-3-col
@@ -121,10 +122,16 @@
       </div>
     </div>
   </div>
+  <app-loading :is-loading="isLoading"></app-loading>
 </template>
 <script>
 import { mapActions, mapState } from 'vuex';
+import AppLoading from '@/components/layout/AppLoading.vue';
 export default {
+  components: {
+    AppLoading,
+  },
+  data: () => ({ isLoading: true }),
   methods: {
     ...mapActions({
       fetchRepositories: 'fetchRepositories',
@@ -147,8 +154,9 @@ export default {
         .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     },
   },
-  async mounted() {
+  async created() {
     await this.fetchRepositories();
+    this.isLoading = false;
   },
 };
 </script>

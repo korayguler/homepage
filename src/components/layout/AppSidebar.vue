@@ -1,49 +1,51 @@
 <template>
-  <app-container
+  <div
     class="
-      xl:w-16
-      lg:w-16
-      sm:h-16
-      md:h-16
-      xl:h-screen
-      lg:h-screen
-      bg-opacity-90 bg-1d1
+      w-full
+      lg:w-16 lg:h-screen lg:bg-opacity-90
+      bg-1d1
       w-screen
       fixed
       z-30
-      xl:py-5
       lg:py-5
       py-2
       px-8
       lg:px-0
-      xl:px-0
     "
   >
-    <div
-      class="flex xl:flex-col lg:flex-col justify-between items-center h-full"
-    >
+    <div class="flex lg:flex-col justify-between items-center h-full">
       <div>
         <router-link to="/">
           <a
             class="
-              w-12
+              w-10
+              h-10
+              lg:w-12
               transition-all
               animate-pulse
               bg-111
               flex
               justify-center
               items-center
-              h-12
+              lg:h-12
               rounded-lg
             "
           >
-            <h1 class="text-4xl text-white transform font-bold leading-none">
+            <h1
+              class="
+                text-2xl text-white
+                transform
+                font-bold
+                leading-none
+                lg:text-4xl
+              "
+            >
               K
             </h1>
           </a>
         </router-link>
       </div>
-      <div class="flex lg:flex-col xl:flex-col justify-between gap-5">
+      <div class="flex lg:flex-col justify-between lg:gap-5 gap-3">
         <router-link
           :to="navItem.url"
           v-for="(navItem, navIndex) in navs"
@@ -57,8 +59,9 @@
           >
             <a
               class="
-                w-12
-                h-12
+                lg:w-12 lg:h-12
+                h-10
+                w-10
                 bg-111
                 flex
                 items-center
@@ -73,6 +76,7 @@
               ><i :class="navItem.icon"></i>
             </a>
             <span
+              v-if="!isMobile"
               class="
                 transition-all
                 duration-300
@@ -103,8 +107,9 @@
         :href="helperButtonAction.url"
         target="_blank"
         class="
-          w-12
-          h-12
+          lg:w-12 lg:h-12
+          h-10
+          w-10
           bg-111
           flex
           items-center
@@ -120,16 +125,13 @@
         <i class="bx" :class="helperButtonAction.icon"></i>
       </a>
     </div>
-  </app-container>
+  </div>
 </template>
 
 <script>
-import AppContainer from '@/components/layout/AppContainer.vue';
-
+import { mapGetters } from 'vuex';
 export default {
-  components: {
-    AppContainer,
-  },
+  components: {},
   data: () => ({
     navs: [
       {
@@ -171,6 +173,8 @@ export default {
     selectedLogo: 0,
   }),
   computed: {
+    ...mapGetters({ isMobile: 'isMobile' }),
+
     helperButtonAction() {
       if (this.$route.path === '/') {
         return {
@@ -189,6 +193,9 @@ export default {
         };
       }
     },
+  },
+  mounted() {
+    console.log(this.isMobile);
   },
 };
 </script>

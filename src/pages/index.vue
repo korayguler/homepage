@@ -1,6 +1,6 @@
 <template>
-  <div class="flex lg:flex-row h-full gap-8 flex-col">
-    <div class="xl:w-1/4 lg:w-1/3 md:w-full sm:w-full w-full flex-shrink-0">
+  <div v-if="!isLoading" class="flex lg:flex-row gap-8 flex-col pb-14">
+    <div class="xl:w-1/4 lg:w-1/3 w-full flex-shrink-0">
       <div class="overflow-hidden rounded-xl">
         <img
           class="w-full pointer-events-none"
@@ -9,7 +9,7 @@
         />
       </div>
 
-      <div class="flex flex-col gap-6 col-span-2 mt-8 ml-2">
+      <div class="flex flex-col mt-3 ml-2 gap-6 h-full">
         <span class="text-xl text-white">HI THERE !</span>
 
         <h1 class="text-3xl font-bold text-white">
@@ -20,11 +20,12 @@
           {{ userData.description }}
         </p>
 
-        <div class="flex justify-between flex-wrap items-center">
+        <div class="flex justify-between flex-wrap items-center gap-3">
           <a
             :href="'mailto:' + userData.email"
             class="
-              px-4
+              lg:px-4
+              px-2
               h-10
               flex
               gap-2
@@ -34,6 +35,9 @@
               font-bold
               text-md
               rounded-lg
+              hover:border-white hover:text-white hover:bg-transparent
+              transition
+              duration-200
             "
           >
             <span class="bx bx-download text-xl"></span>
@@ -42,7 +46,8 @@
           <a
             :href="'mailto:' + userData.email"
             class="
-              px-4
+              lg:px-4
+              px-2
               h-10
               flex
               gap-2
@@ -70,12 +75,14 @@
             target="_blank"
             :key="i"
             class="
-              h-12
+              h-9
+              lg:h-12
               w-full
               text-white
               border border-white
               rounded-lg
-              text-3xl
+              lg:text-3xl
+              text-xl
               flex
               items-center
               justify-center
@@ -107,18 +114,14 @@
           overflow-hidden
           transition
           duration-200
-          transform
-          hover:-translate-x-5 hover:scale-105
         "
+        :class="{ 'transform hover:-translate-x-5 hover:scale-105': !isMobile }"
       >
         <div class="flex flex-col gap-3">
           <h1 class="md:text-2xl text-lg text-white">{{ post.title }}</h1>
-          <p class="text-lg text-white">Author: {{ post.author }}</p>
+          <p class="italic text-lg text-white">Author: {{ post.author }}</p>
           <div class="flex gap-2 justify-between">
-            <div class="flex items-center gap-1 text-white font-semibold">
-              <span>Read More</span> <i class="bx bx-chevrons-right"></i>
-            </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 flex-wrap">
               <span
                 class="
                   py-0.5
@@ -145,21 +148,33 @@
             .join('.')
         }}</span>
         <img
-          class="absolute w-full top-0 right-0 left-0 filter blur-sm opacity-20"
+          class="
+            absolute
+            w-full
+            lg:h-auto
+            top-0
+            right-0
+            left-0
+            bottom-0
+            filter
+            blur-sm
+            opacity-20
+          "
           :src="post.thumbnail"
           alt=""
         />
       </a>
-      <!-- 
-      <pre>
-        {{ posts }}
-      </pre> -->
     </div>
   </div>
+  <app-loading :is-loading="isLoading"></app-loading>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapGetters } from 'vuex';
+import AppLoading from '@/components/layout/AppLoading.vue';
 export default {
+  components: {
+    AppLoading,
+  },
   data: () => ({
     socials: [
       { icon: 'bxl-linkedin' },
@@ -168,16 +183,29 @@ export default {
       { icon: 'bxl-medium' },
       { icon: 'bxl-twitter' },
     ],
+    isLoading: true,
   }),
   computed: {
     ...mapState({ userData: 'userData', posts: 'posts' }),
+    ...mapGetters({ isMobile: 'isMobile' }),
   },
   methods: {
     ...mapActions({ fetchPosts: 'fetchPosts', fetchUserData: 'fetchUserData' }),
   },
-  async mounted() {
+  async created() {
     await this.fetchUserData();
     await this.fetchPosts();
+    let imageLoaded = 0;
+    const img = new Image();
+    img.src = this.userData.avatar;
+
+    img.onload = () => {
+      imageLoaded++;
+
+      if (imageLoaded === 1) {
+        this.isLoading = false;
+      }
+    };
   },
 };
 </script>

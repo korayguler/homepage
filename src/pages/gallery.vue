@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="!isLoading"
     class="
       xl:masonry-6-col
       lg:masonry-5-col
@@ -69,7 +70,7 @@
 
         <span
           :class="{ 'opacity-100': item.isHovered }"
-          v-if="item.description"
+          v-if="!isMobile && item.description"
           class="
             z-20
             transition
@@ -93,7 +94,7 @@
       </div>
     </div>
   </div>
-
+  <app-loading :is-loading="isLoading"></app-loading>
   <vue-easy-lightbox
     :visible="visible"
     :imgs="images"
@@ -102,23 +103,42 @@
   ></vue-easy-lightbox>
 </template>
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex';
+import { mapState, mapActions, mapGetters } from 'vuex';
+import AppLoading from '@/components/layout/AppLoading.vue';
 export default {
+  components: {
+    AppLoading,
+  },
   data: () => ({
     images: [],
     index: 0,
     visible: false,
     pageIsScrolled: false,
+    isLoading: true,
   }),
-  async mounted() {
+  async created() {
     await this.fetchGalleryImages();
+    this.images = await this.galleryImages;
 
-    this.images = this.galleryImages;
+    let imageLoaded = 0;
+    for (const image of this.images) {
+      const img = new Image();
+      img.src = image.src;
+
+      img.onload = () => {
+        imageLoaded++;
+
+        if (imageLoaded === this.images.length) {
+          this.isLoading = false;
+        }
+      };
+    }
   },
   computed: {
     ...mapState({
       galleryImages: 'galleryImages',
     }),
+    ...mapGetters({ isMobile: 'isMobile' }),
   },
   methods: {
     ...mapActions({ fetchGalleryImages: 'fetchGalleryImages' }),
