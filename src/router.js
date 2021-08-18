@@ -1,9 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import Home from './pages/index.vue';
+import Projects from './pages/projects.vue';
+import Gallery from './pages/gallery.vue';
+
 const routes = [
-  { path: '/', component: () => import('@/pages/index.vue') },
-  { path: '/projects', component: () => import('@/pages/projects.vue') },
-  { path: '/gallery', component: () => import('@/pages/gallery.vue') },
+  { path: '/', component: Home },
+  { path: '/projects', component: Projects },
+  { path: '/gallery', component: Gallery },
 ];
 
 const config = createRouter({

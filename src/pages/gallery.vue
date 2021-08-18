@@ -33,7 +33,7 @@
         transition
         duration-300
       "
-      v-for="(item, index) in images"
+      v-for="(item, index) in galleryImages"
       :key="index"
     >
       <img
@@ -41,7 +41,7 @@
           'filter  ': item.bw,
         }"
         class="rounded-xl w-full transition duration-300"
-        :src="item.urls.thumb"
+        :src="item.urls.small"
         alt=""
       />
       <div class="absolute bottom-1 left-1 right-1 flex w-auto justify-between">
@@ -97,7 +97,7 @@
   <app-loading :is-loading="isLoading"></app-loading>
   <vue-easy-lightbox
     :visible="visible"
-    :imgs="images"
+    :imgs="galleryImages"
     :index="index"
     @hide="handleHide"
   ></vue-easy-lightbox>
@@ -116,19 +116,19 @@ export default {
     pageIsScrolled: false,
     isLoading: true,
   }),
-  async created() {
-    await this.fetchGalleryImages();
-    this.images = await this.galleryImages;
-
+  created() {
+    this.fetchGalleryImages();
+  },
+  mounted() {
     let imageLoaded = 0;
-    for (const image of this.images) {
+    for (const image of this.galleryImages) {
       const img = new Image();
       img.src = image.src;
 
       img.onload = () => {
         imageLoaded++;
 
-        if (imageLoaded === this.images.length) {
+        if (imageLoaded === this.galleryImages.length) {
           this.isLoading = false;
         }
       };
@@ -166,11 +166,8 @@ export default {
     },
 
     showImg(event, index) {
-      console.log(index);
       this.index = index;
       this.visible = true;
-
-      console.log(event);
     },
     handleHide() {
       this.visible = false;

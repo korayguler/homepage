@@ -194,8 +194,5 @@ export default {
       }
     },
   },
-  mounted() {
-    console.log(this.isMobile);
-  },
 };
 </script>

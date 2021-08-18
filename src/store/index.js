@@ -73,7 +73,6 @@ const store = createStore({
     },
     setWindowWidth(state) {
       state.windowWidth = window.innerWidth;
-      console.log(state.windowWidth);
     },
   },
   getters: {
