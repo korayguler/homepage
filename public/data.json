@@ -23,17 +23,17 @@
     {
       "name": "Twitter",
       "icon": "bxl-twitter",
-      "url": "https://twitter.com/koraycode"
+      "url": "https://twitter.com/koguler"
     },
     {
       "name": "Instagram",
       "icon": "bxl-instagram",
-      "url": "https://instagram.com/koraycode"
+      "url": "https://instagram.com/koray.dev"
     }
   ],
   "avatar": "https://images.unsplash.com/profile-1627128664323-7439ccedf295image?dpr=1&auto=format&fit=crop&w=600&h=600&q=60&crop=faces",
   "email": "koray.guler@hotmail.com",
   "name": "Koray Guler",
-  "description": "I'm a Frontend Developer based in Istanbul, Turkey. I build, test and deploy modern web applications and i am interested in photography, trekking and swimming",
+  "description": "I'm a Frontend Developer based in Istanbul, Turkey. I build, test and deploy modern web applications and i am interested in photography, trekking",
   "cv": ""
 }
